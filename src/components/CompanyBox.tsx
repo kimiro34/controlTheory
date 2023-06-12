@@ -40,13 +40,14 @@ const itemData = [
   
 const CompanyBox = () => {
     return(
-        <ImageList sx={{ maxWidth: 1035}} cols={4} gap={55} >
+        <ImageList sx={{ maxWidth: 1035}} cols={4} gap={55} rowHeight={120}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
                 <img
                   src={`${item.img}`}
                   alt={item.title}
                   loading="lazy"
+                  style={{marginBottom:"37px"}}
                 />
               {/* <Button
                 style={{

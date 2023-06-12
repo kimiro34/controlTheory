@@ -184,7 +184,7 @@ const HomePage = () => {
                     maxWidth: '1018px',
                     minHeight: '62px',
                     margin: 'auto',
-                    marginTop: '113px'
+                    paddingTop:'113px'
                   }}
                 >
                     <Typography style={{
@@ -211,7 +211,8 @@ const HomePage = () => {
             </Box>
             <Box
               sx={{
-                
+                minHeight:'760px',
+                border:'1px solid black'
               }}
             >
 
