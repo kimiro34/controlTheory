@@ -1,12 +1,14 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
-import Container from '@mui/material/Container';
 import PageHeader from '../components/PageHeader';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CompanyBox from '../components/CompanyBox';
+import WorkBox from '../components/WorkBox';
+import Link from '@mui/material/Link';
+import ContactForm from '../components/ContactForm';
 
 const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 
@@ -174,6 +176,8 @@ const HomePage = () => {
             <Box
               sx={{
                 minHeight: '760px',
+                paddingLeft: '40px',
+                paddingRight: '40px',
               }}
             >
                  <Box
@@ -206,17 +210,75 @@ const HomePage = () => {
                     marginTop: '116px'
                   }}
                 >
-                    <CompanyBox />
+                  <CompanyBox />
                 </Box>
             </Box>
             <Box
               sx={{
                 minHeight:'760px',
-                border:'1px solid black'
+                border:'1px solid black',
+                paddingTop:'70px',
+                paddingLeft: '40px',
+                paddingRight: '40px'
               }}
             >
-
+                <Box
+                  sx={{
+                    maxWidth:'1234px',
+                    display:'flex',
+                    justifyContent:'space-between',
+                    margin: 'auto'
+                  }}
+                >
+                  <Button style={{fontSize:'20px', fontWeight:'700', color:'black'}}>
+                      Featured Work
+                  </Button>
+                  <Button style={{fontSize:'20px', fontWeight:'700', color:'black'}}>
+                      All Work
+                  </Button>
+                </Box>
+                <Box
+                  sx={{
+                    margin:'auto',
+                    maxWidth:'1278px',
+                    marginTop:'68px',
+                  }}
+                >
+                  <WorkBox />
+                </Box>
             </Box>
+            <Box
+              sx={{
+                minHeight:'173.69px',
+                backgroundColor:'#D3D3D3'
+              }}
+            >
+              <Box
+                sx={{
+                  margin:'auto',
+                  justifyContent:'space-between',
+                  display:'flex',
+                  maxWidth:'1244px',
+                  paddingTop:'35px',
+                  paddingLeft: '40px',
+                  paddingRight: '40px'
+                }}
+              >
+                <Box>
+                  <Typography style={{fontSize:'18px', fontWeight:'400'}}>Our inbox is missing you:</Typography>
+                  <Link href='#' underline="none" style={{fontSize:'24px', fontWeight:'400', color:'black'}}>holla@controltheory.io</Link>
+                </Box>
+                <Box
+                  sx={{
+                    textAlign:'right'
+                  }}
+                >
+                  <Typography style={{fontSize:'18px', fontWeight:'400'}}>Apply for work:</Typography>
+                  <Link href='#' underline="none" style={{fontSize:'24px', fontWeight:'400', color:'black'}}>work@controltheory.io</Link>
+                </Box>
+              </Box>
+            </Box>
+            <ContactForm />
         </div>
     );
 }

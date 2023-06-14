@@ -40,27 +40,15 @@ const itemData = [
   
 const CompanyBox = () => {
     return(
-        <ImageList sx={{ maxWidth: 1035}} cols={4} gap={55} rowHeight={120}>
+        <ImageList sx={{ maxWidth: 1035}} cols={4} gap={55} rowHeight={157}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
                 <img
                   src={`${item.img}`}
                   alt={item.title}
                   loading="lazy"
-                  style={{marginBottom:"37px"}}
                 />
-              {/* <Button
-                style={{
-                    height: '120px',
-                    fontSize:'24px',
-                    fontWeight:'700',
-                    color:'black',
-                    backgroundImage:`url(${item.img})`,
-                    padding:'unset',
-                }}
-              >
-                {item.title}
-              </Button> */}
+                <div style={{height:'37px'}}></div>
             </ImageListItem>
           ))}
         </ImageList>
