@@ -600,7 +600,7 @@ const HomePage = () => {
                   fontFamily: "Nunito Sans",
                 }}
               >
-                We build
+                We develop
                 <FuzzyText string=" digital realms, " />
                 one line of code and pixel at a time. Meet the team behind
                 immersive,
